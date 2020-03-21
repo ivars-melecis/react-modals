@@ -1,0 +1,139 @@
+/* Modal Demo
+=============*/
+.modal-icons {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfbfb;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.modal-icons h2 {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.2;
+  padding: 10px 0;
+  text-align: left;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.modal-icons .modal-demo-set {
+  display: flex;
+}
+
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$lightFill: #fbfbfb;
+$darkFill: #1b1b1b;
+
+/* Icon Styling
+===============*/
+.modal-icon {
+  position: relative;
+  display: block;
+  border: none;
+  margin: 5px;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: none;
+    transition: ease 0.2s background;
+  }
+
+  &:focus::before,
+  &:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  > svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: $lightFill;
+    z-index: 2;
+  }
+}
+
+/* Icon Colours
+==============*/
+.mi-primary {
+  background: $primary;
+}
+
+.mi-secondary {
+  background: $secondary;
+}
+
+.mi-success {
+  background: $success;
+}
+
+.mi-danger {
+  background: $danger;
+}
+
+.mi-warning {
+  background: $warning;
+}
+
+.mi-warning svg {
+  fill: $darkFill;
+}
+
+.mi-info {
+  background: $info;
+}
+
+.mi-light {
+  background: $light;
+}
+
+.mi-light svg {
+  fill: $darkFill;
+}
+
+.mi-dark {
+  background: $dark;
+
+  &:focus::before,
+  &:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
